@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextPeso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Peso (kg)"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:id="@+id/editTextAlt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPeso"
+        android:layout_marginTop="16dp"
+        android:hint="Altura (m)"
+        android:inputType="numberDecimal"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupSex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPeso"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="27dp">
+
+        <RadioButton
+            android:id="@+id/btnFem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="feminino" />
+
+        <RadioButton
+            android:id="@+id/btnMasc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="masculino" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonCalculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroupSex"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:text="Calcular" />
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonCalculate"
+        android:layout_marginTop="16dp"
+        android:text="Resultado:"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

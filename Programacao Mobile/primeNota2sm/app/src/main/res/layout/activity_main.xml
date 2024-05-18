@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Designer da tela de inicio, tem o listView para consulta dos livros,
+opção de pesquisa dos livros
+e dois botoes para novas telas botão.
+Primeiro botão que leva para adicionar novos livros e segundo
+botão que leva para remover livros
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+
+        <!--
+            Abaixo os dois sistemas de pesquisa do aplicativo, primeiro está no editText serve para
+            procurar por nome, segundo está no Spinner serve para procurar livros conforme seu genero
+        -->
+        <EditText
+            android:id="@+id/edit_text_procurar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Buscar por nome"
+            android:minWidth="48dp" />
+
+        <Spinner
+            android:id="@+id/spinner_genero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:minWidth="48dp" />
+
+    </LinearLayout>
+
+    <!--
+    ListView que aparece todos os livros registrados,
+    parte de consulta do aplicativo
+    -->
+    <ListView
+        android:id="@+id/listView_livros"
+        android:layout_width="wrap_content"
+        android:layout_height="590sp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--
+            Primeiro botão serve encaminhar para uma nova tela chamada de
+            CadActivity.java/Activity_cad.xml
+        -->
+        <Button
+            android:id="@+id/button_adicionar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Adicionar" />
+
+
+        <!--
+            Segundo botão serve encaminhar para uma nova tela chamada de
+            DelActivity.java/Activity_del.xml
+        -->
+        <Button
+            android:id="@+id/button_deletar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Excluir livro" />
+
+    </LinearLayout>
+
+</LinearLayout>

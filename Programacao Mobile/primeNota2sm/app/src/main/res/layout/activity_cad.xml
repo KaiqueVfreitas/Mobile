@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Designer da tela de cadastro, tem EditText para registro do nome,
+Spinner que registra o genero do livro sendo cadastrado
+Um ratinBar em forma de estrela com 5 estrelas para avaliação
+Dois radio button para seleção de tipo do livro
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <!--Registro do nome do livro será dado pelo nome deste edittext-->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome do livro"
+        android:id="@+id/edit_text_nome_inclusao"/>
+
+    <!--Registro do genero do livro será dado pela escolha neste spinner-->
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/spinner_genero_inclusao"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nota:"/>
+
+    <!--Registro das estelas de avaliação do livro-->
+    <RatingBar
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:numStars="5"
+        android:id="@+id/rating_bar_nota_inclusao"/>
+
+
+    <!--Escolha do tipo de livro fisico ou ebook-->
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipo"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Livro físico"
+            android:id="@+id/radio_tipo_livro"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E-BOOK"
+            android:id="@+id/radio_tipo_ebook"/>
+    </RadioGroup>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+        android:layout_gravity="center"
+        android:id="@+id/button_inclusao"
+        android:text="CADASTRAR"
+        />
+</LinearLayout>

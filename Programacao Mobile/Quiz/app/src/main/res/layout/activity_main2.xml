@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tela2">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="50dp"
+        android:text="Qual jogo é esse?"
+        android:layout_margin="10dp"
+        android:textAlignment="center"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/stalker" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radio_button_a2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Metro Exodus"/>
+        <RadioButton
+            android:id="@+id/radio_button_b2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resident Evil"/>
+        <RadioButton
+            android:id="@+id/radio_button_c2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stalker"/>
+        <RadioButton
+            android:id="@+id/radio_button_d2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Esquema de Piramide"/>
+    </RadioGroup>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Responder"
+        android:id="@+id/button_responder_q2"/>
+</LinearLayout>
